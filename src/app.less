@@ -1,0 +1,136 @@
+.longText {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.scrollContent::-webkit-scrollbar {
+  display: none;
+}
+
+.rewardTitle {
+  width: 397px;
+  height: 66px;
+  background: linear-gradient(
+    90deg,
+    rgba(168, 213, 26, 0) 0%,
+    #52cb50 51%,
+    rgba(0, 193, 132, 0) 100%
+  );
+  border: 2px solid;
+  border-image: linear-gradient(
+      90deg,
+      rgba(255, 238, 147, 0),
+      rgba(139, 232, 149, 1),
+      rgba(26, 226, 151, 0)
+    )
+    2 2;
+  margin: 38px auto 0;
+  text-align: center;
+  line-height: 66px;
+  font-size: 32px;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #00734e;
+}
+
+.rewardContent {
+  display: flex;
+  //align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+  .rewardLi {
+    height: auto;
+    box-sizing: border-box;
+  }
+  .rewardLi1 {
+    width: 100%;
+  }
+  .rewardLi2 {
+    width: calc(100% / 2);
+    margin-bottom: 40px;
+  }
+  .rewardLi3 {
+    width: calc(100% / 3);
+  }
+}
+
+.comContent {
+  margin: 100px auto 0;
+  width: 710px;
+  height: auto;
+  background: #d0fde1 linear-gradient(180deg, #fdf8d8 0%, #d2fbe2 100%);
+  border-radius: 12px;
+  border: 2px solid;
+  border-image: linear-gradient(
+      180deg,
+      rgba(143, 255, 165, 1),
+      rgba(85, 195, 145, 1)
+    )
+    2 2;
+  position: relative;
+  border-top: 0.1px solid transparent;
+  padding-bottom: 42px;
+  .titleContent {
+    width: 714px;
+    height: 94px;
+    margin-top: -44px;
+    margin-left: -4px;
+    background: url('./assets/images/title_com_bg.png') 0 0 no-repeat;
+    background-size: 100% 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-family: YouSheBiaoTiHei;
+    color: #ffffff;
+  }
+}
+
+.module_subTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 376px;
+  height: 60px;
+  background: linear-gradient(
+    180deg,
+    #fb99a5 0%,
+    #f478a1 22%,
+    #f478a1 49%,
+    #f478a1 76%,
+    #fb93a5 100%
+  );
+  border-radius: 0px 0px 16px 16px;
+  border: 2px solid #f478a1;
+  font-size: 34px;
+  font-family: FZLTTHK--GBK1-0, FZLTTHK--GBK1;
+  font-weight: normal;
+  color: #ffffec;
+  line-height: 46px;
+  text-shadow: 2px 2px 0px #a43c65;
+  margin: 0 auto;
+}
+
+.module_container {
+  width: 670px;
+  height: auto;
+  border-radius: 16px;
+  margin: 10px auto;
+  padding-top: 30px;
+  .module_title {
+    width: 354px;
+    height: 94px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 94px;
+    font-size: 32px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+    background: url('./assets/images/icon_sub_title.png') 0 0 no-repeat;
+    background-size: 100% 100%;
+  }
+}

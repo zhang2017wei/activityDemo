@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title></title>
+    <!--<link rel="icon" href="./static/favicon.ico">-->
+  </head>
+  <script src="./polyfill.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="./font.css" />
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
+<script>
+  document.documentElement.style.fontSize = (100 * innerWidth) / 750 + 'px'
+  addEventListener('load', function () {
+    setTimeout(function () {
+      document.documentElement.style.fontSize = (100 * innerWidth) / 750 + 'px'
+      window.unit = (100 * innerWidth) / 750
+      var e = document.createEvent('Event')
+      e.initEvent('adjustReady', true, true)
+      window.dispatchEvent(e)
+    }, 1)
+  })
+</script>
+
+<!-- baidu tongji -->
+<script>
+  var _hmt = _hmt || []
+  ;(function () {
+    var hm = document.createElement('script')
+    hm.defer = true
+    hm.src = 'https://hm.baidu.com/hm.js?dc74ccb3ab70a76ca0baf2fc351d8041'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+  // window._hmt.push(['_trackEvent', _clickName, 'click', '提交信息成功']);
+</script>
+<script>
+  // 禁用缩放
+  function addMeta() {
+    $('head').append(
+      '<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />'
+    )
+  }
+  setTimeout(addMeta, 3000)
+  // 禁用双指放大
+  document.documentElement.addEventListener(
+    'touchstart',
+    function (event) {
+      if (event.touches.length > 1) {
+        event.preventDefault()
+      }
+    },
+    {
+      passive: false
+    }
+  )
+
+  // 禁用双击放大
+  var lastTouchEnd = 0
+  document.documentElement.addEventListener(
+    'touchend',
+    function (event) {
+      var now = Date.now()
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault()
+      }
+      lastTouchEnd = now
+    },
+    {
+      passive: false
+    }
+  )
+</script>
